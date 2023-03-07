@@ -1,43 +1,85 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { Header } from "./components/header";
 
-import './App.css'
+import './assets/css/App.css'
+import './assets/css/Finance.css'
+import { useState } from 'react';
+import { Transaction } from './models/Transaction.model';
+import TransactionList from './components/TransactionList';
+import Header from "./components/Header";
+import MenuCard from './components/MenuCard';
+import { Category } from './models/Category.model';
 
-function App() {
 
-  return (
-    <div className="App">
-        <div className="container">
-          <Header></Header>
+export function App() {
 
-          <div className="row align-items-center justify-content-center p-2" style="height: calc(100vh - 90px); overflow: hidden;">
-              <div className="col-md-4">
-                  <div className="row justify-content-center align-items-center">
-                      <div className="card card-menu">
-                          <span className="fa-solid fa-user"></span>
-                      </div>
-                      <div className="card card-menu">
-                          <span className="fa-solid fa-chart-line"></span>
-                      </div>
-                      <div className="card card-menu">
-                          <span className="fa-solid fa-landmark"></span>
-                      </div>
-                      <div className="card card-menu">
-                          <span className="fa-solid fa-border-all"></span>
-                      </div>
-                  </div>
-                  <br />
-                  <div className="transaction-box transaction-box-more">
-                      <div className="transaction-more"><span className=" fa-solid fa-plus"></span></div>
-                  </div>
-              </div>
-          </div>
+    const [transactions, setTransactions] = useState<Transaction[]>([
+        {
+            type: true,
+            concept: "Salary",
+            account: "NEQUI",
+            category: "Work",
+            money: 3000000,
+            date: "01/03/2023"
+        },
+        {
+            type: false,
+            concept: "Lasagna",
+            account: "BANCOMEVA",
+            category: "Food",
+            money: 37500,
+            date: "05/03/2023"
+        }
+    ])
 
-    </div>
 
-    </div>
-  )
+    const [categories, setCategories] = useState<Category[]>([
+        {
+            name: "School",
+            porcent: 50,
+            icon: "fa-user",
+        },
+        {
+            name: "School",
+            porcent: 100,
+            icon: "fa-user",
+        },
+        {
+            name: "School",
+            porcent: 30,
+            icon: "fa-user",
+        },
+        {
+            name: "School",
+            porcent: 10,
+            icon: "fa-user",
+        }
+    ])
+
+
+    return (
+        <div className="App">
+            <div className="container">
+                <Header></Header>
+                <div className="row align-items-center justify-content-center p-2 main-panel">
+                    {/* 1RS COL */}
+                    <div className="col-md-4">
+                        <div className="row justify-content-center align-items-center">
+                            <MenuCard icon="fa-user"/>
+                            <MenuCard icon="fa-chart-line"/>
+                            <MenuCard icon="fa-landmark"/>
+                            <MenuCard icon="fa-border-all"/>
+                        </div>
+                        <br />
+                        <TransactionList transactions={transactions}/>
+                    </div>
+
+                    {/* 2ND COL */}
+                    <div className="col-md-6 h-100">
+                        <div className="row card-finance mb-3">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
-
-export default App
