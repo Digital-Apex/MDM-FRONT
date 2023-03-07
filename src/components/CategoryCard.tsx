@@ -19,7 +19,7 @@ export default function CategoryCard({category}:Props) {
                 <div className="col-md-10 align-self-center">
                     <span className="text-center w-100 text-white text-long d-block icon-category">{category.name}</span>
                     <div className="progress">
-                        <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width:category.porcent}}></div>
+                        {/* <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width:category.porcent}}></div> */}
                     </div>
                 </div>
             </div>
