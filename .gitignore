@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+build
 dist-ssr
 *.local
 
@@ -23,8 +24,34 @@ dist-ssr
 *.sln
 *.sw?
 
-# Created by https://www.toptal.com/developers/gitignore/api/node,yarn,react,visualstudiocode,windows,macos,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,react,visualstudiocode,windows,macos,linux
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/node,yarn,linux,macos,react,windows,visualstudiocode,git,firebase
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,linux,macos,react,windows,visualstudiocode,git,firebase
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
 
 ### Linux ###
 *~
@@ -289,4 +316,4 @@ $RECYCLE.BIN/
 # and uncomment the following lines
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/node,yarn,react,visualstudiocode,windows,macos,linux
+# End of https://www.toptal.com/developers/gitignore/api/node,yarn,linux,macos,react,windows,visualstudiocode,git,firebase

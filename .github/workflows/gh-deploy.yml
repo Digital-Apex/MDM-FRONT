@@ -1,4 +1,4 @@
-name: My Daily Manager Deploy
+name: GithubPages Deployment
 
 on:
   push:
