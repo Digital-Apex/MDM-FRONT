@@ -27,22 +27,6 @@ export function App() {
             category: "Food",
             money: 37500,
             date: "05/03/2023"
-        },
-        {
-            type: true,
-            concept: "Salary",
-            account: "NEQUI",
-            category: "Work",
-            money: 3000000,
-            date: "01/03/2023"
-        },
-        {
-            type: false,
-            concept: "Lasagna",
-            account: "BANCOMEVA",
-            category: "Food",
-            money: 37500,
-            date: "05/03/2023"
         }
     ])
 
