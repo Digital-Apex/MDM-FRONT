@@ -1,8 +1,10 @@
 name: Firebase Deployment
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
 jobs:
   build:
     name: Build
@@ -40,6 +42,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy --only hosting:my-daily-manager
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
