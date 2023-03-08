@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "my-daily-manager",
     "public": "build",
     "ignore": [
       "firebase.json",
